@@ -7,11 +7,15 @@ using namespace Core;
 
 int main()
 {
-	Core::GameWindowManager gameWindowManager;
+	GameWindowManager* game_window_manager = new GameWindowManager();
+	
+	game_window_manager->initialize();
 
-	gameWindowManager.initialize();
-
-	while (gameWindowManager.isGameRunning()) { gameWindowManager.render(); }
+	while (game_window_manager->isGameRunning())
+	{
+		game_window_manager->update();
+		game_window_manager->render();
+	}
 
 	return 0;
 }
