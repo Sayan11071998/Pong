@@ -138,10 +138,12 @@
     <ClCompile Include="Source\Core\GameLoop.cpp" />
     <ClCompile Include="Source\Core\GameWindowManager.cpp" />
     <ClCompile Include="Source\Event\EventManager.cpp" />
+    <ClCompile Include="Source\Gameplay\Ball\Ball.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Core\GameWindowManager.h" />
     <ClInclude Include="Header\Event\EventManager.h" />
+    <ClInclude Include="Header\Gameplay\Ball\Ball.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
