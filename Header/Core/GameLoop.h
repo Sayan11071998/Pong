@@ -5,9 +5,9 @@
 #include "../../Header/Gameplay/GameplayManager.h"
 
 using namespace sf;
+using namespace std;
 using namespace Core;
 using namespace Event;
-using namespace std;
 using namespace Gameplay;
 
 namespace Core

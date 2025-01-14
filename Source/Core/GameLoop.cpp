@@ -11,18 +11,16 @@ namespace Core
 		game_window_manager->initialize();
 	}
 
-	void GameLoop::update()
-	{
-	}
+	void GameLoop::update() { gameplay_manager->update(); }
 
 	void GameLoop::render()
 	{
 		game_window_manager->clearGameWindow();
-		game_window_manager->displayGameWindow();
 		gameplay_manager->render(game_window_manager->getGameWindow());
+		game_window_manager->displayGameWindow();
 	}
 
-	bool GameLoop::isGameRunning() { return game_window_manager->isGameRunning(); }
+	bool GameLoop::isGameRunning() { return game_window_manager->isGameOpen(); }
 
 	void GameLoop::pollEvent() { event_manager->pollEvents(game_window_manager->getGameWindow()); }
 }

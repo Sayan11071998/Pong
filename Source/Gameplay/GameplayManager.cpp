@@ -1,3 +1,4 @@
+#pragma once
 #include "../../Header/Gameplay/GameplayManager.h"
 
 namespace Gameplay
@@ -11,9 +12,7 @@ namespace Gameplay
 		player2 = new Paddle(player2_position_x, player2_position_y);
 	}
 
-	void GameplayManager::update()
-	{
-	}
+	void GameplayManager::update() {}
 
 	void GameplayManager::render(RenderWindow* game_window)
 	{

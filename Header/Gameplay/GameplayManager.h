@@ -1,6 +1,6 @@
 #pragma once
-#include "Paddle/Paddle.h"
-#include "Ball/Ball.h"
+#include "../../Header/Gameplay/Ball/Ball.h"
+#include "../../Header/Gameplay/Paddle/Paddle.h"
 
 namespace Gameplay
 {

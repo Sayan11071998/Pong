@@ -9,13 +9,16 @@ namespace Gameplay
 	{
 	public:
 		Paddle(float position_x, float position_y);
+
 		void update();
 		void render(RenderWindow* game_window);
 
 	private:
-		RectangleShape* paddle_sprite;
+		RectangleShape paddle_sprite;
 
 		const float paddle_width = 20.0f;
 		const float paddle_height = 140.0f;
+
+		void createPaddle(float position_x, float position_y);
 	};
 }
