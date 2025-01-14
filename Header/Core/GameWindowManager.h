@@ -10,10 +10,8 @@ namespace Core
 	{
 	public:
 		void initialize();
-		void update();
-		void render();
 
-		bool isGameRunning();
+		bool isGameOpen();
 		void clearGameWindow();
 		void displayGameWindow();
 

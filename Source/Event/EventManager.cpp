@@ -10,11 +10,8 @@ namespace Event
 		{
 			if (event.type == sf::Event::Closed) { game_window->close(); }
 			if (isKeyPressed(sf::Keyboard::Escape)) { game_window->close(); }
-			if (isLeftMouseButtonClicked()) { sf::Vector2i position = sf::Mouse::getPosition(*game_window); }
 		}
 	}
 
-	bool EventManager::isKeyPressed(sf::Keyboard::Key key) { return sf::Keyboard::isKeyPressed(key); }
-
-	bool EventManager::isLeftMouseButtonClicked() { return (sf::Mouse::isButtonPressed(sf::Mouse::Left)); }
+	bool EventManager::isKeyPressed(Keyboard::Key key) { return Keyboard::isKeyPressed(key); }
 }
