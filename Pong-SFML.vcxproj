@@ -133,7 +133,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Header\Core\GameLoop.h" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\Core\GameLoop.cpp" />
     <ClCompile Include="Source\Core\GameWindowManager.cpp" />
     <ClCompile Include="Source\Event\EventManager.cpp" />
   </ItemGroup>
