@@ -20,6 +20,7 @@ namespace Core
 		void render();
 
 		bool isGameRunning();
+		void pollEvent();
 
 	private:
 		GameWindowManager* game_window_manager;

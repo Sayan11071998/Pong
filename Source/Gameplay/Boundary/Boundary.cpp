@@ -5,18 +5,20 @@ namespace Gameplay
 	Boundary::Boundary()
 	{
 		createTopBoundary();
+		createBottomBoundary();
 		createLeftBoundary();
+		createRightBoundary();
 		createCenterLine();
 	}
 
-	void Boundary::update()
-	{
-	}
+	void Boundary::update() {}
 
 	void Boundary::render(RenderWindow* game_window)
 	{
 		game_window->draw(topBoundary);
+		game_window->draw(bottomBoundary);
 		game_window->draw(leftBoundary);
+		game_window->draw(rightBoundary);
 		game_window->draw(centerLine);
 	}
 
