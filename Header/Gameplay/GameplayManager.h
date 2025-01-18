@@ -3,9 +3,11 @@
 #include "../../Header/Gameplay/Boundary/Boundary.h"
 #include "../../Header/Gameplay/Ball/Ball.h"
 #include "../../Header/Gameplay/Paddle/Paddle.h"
+#include "../../Header/Utility/TimeService.h"
 #include "../../Header/Event/EventManager.h"
 
 using namespace Event;
+using namespace Utility;
 
 namespace Gameplay
 {
@@ -17,7 +19,6 @@ namespace Gameplay
 		void update();
 		void render(RenderWindow* game_window);
 
-		void checkRoundState();
 		void resetPlayers();
 
 	private:
@@ -28,6 +29,7 @@ namespace Gameplay
 		float player2_position_y = 300.0f;
 
 		EventManager* event_manager;
+		TimeService* time_service = new TimeService();
 		Boundary* boundary = new Boundary();
 		Ball* ball = new Ball();
 		Paddle* player1 = new Paddle(player1_position_x, player1_position_y);
