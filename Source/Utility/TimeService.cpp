@@ -20,7 +20,7 @@ namespace Utility
 	{
 		int delta = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - previous_time).count();
 
-		return static_cast<float>(delta) / 1000000.0f;
+		return static_cast<float>(delta) / static_cast<float>(1000000);
 	}
 
 	void TimeService::updatePreviousTime() { previous_time = std::chrono::steady_clock::now(); }

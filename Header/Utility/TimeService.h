@@ -1,6 +1,8 @@
 #pragma once
 #include <chrono>
 
+using namespace std;
+
 namespace Utility
 {
 	class TimeService
@@ -12,7 +14,7 @@ namespace Utility
 		float getDeltaTime();
 
 	private:
-		std::chrono::steady_clock::time_point previous_time;
+		chrono::steady_clock::time_point previous_time;
 		float delta_time;
 
 		void updateDeltaTime();
