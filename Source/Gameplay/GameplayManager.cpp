@@ -3,7 +3,10 @@
 
 namespace Gameplay
 {
-	GameplayManager::GameplayManager() { initialize(); }
+	GameplayManager::GameplayManager(EventManager* manager)
+	{
+		event_manager = manager;
+	}
 
 	void GameplayManager::initialize()
 	{
@@ -12,7 +15,13 @@ namespace Gameplay
 		player2 = new Paddle(player2_position_x, player2_position_y);
 	}
 
-	void GameplayManager::update() {}
+	void GameplayManager::update()
+	{
+		ball->update();
+
+		player1->update(event_manager > iskeyPressed(Keyboard::W), event_manager->isKeyPressed(Keyboard::S));
+		player2->update(event_manager > iskeyPressed(Keyboard::Up), event_manager->isKeyPressed(Keyboard::Down));
+	}
 
 	void GameplayManager::render(RenderWindow* game_window)
 	{
