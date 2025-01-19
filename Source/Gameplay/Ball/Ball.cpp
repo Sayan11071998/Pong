@@ -58,10 +58,24 @@ namespace Gameplay
 		FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
 
 		if (ball_bounds.left <= left_boundary)
+		{
+			updateLeftCollisionState(true);
 			reset();
+		}
 		else if (ball_bounds.left + ball_bounds.width >= right_boundary)
+		{
+			updateRightCollisionState(true);
 			reset();
+		}
 	}
+
+	bool Ball::isLeftCollisionOccurred() { return had_left_collision; }
+
+	bool Ball::isRightCollisionOccurred() { return had_right_collision; }
+
+	void Ball::updateLeftCollisionState(bool value) { had_left_collision = value; }
+
+	void Ball::updateRightCollisionState(bool value) { had_right_collision = value; }
 
 	void Ball::loadTexture() { pong_ball_texture.loadFromFile(texture_path); }
 
