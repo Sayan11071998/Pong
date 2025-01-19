@@ -19,7 +19,6 @@ namespace UI
 
 	private:
 		Font font;
-
 		Text left_score_text;
 		Text right_score_text;
 

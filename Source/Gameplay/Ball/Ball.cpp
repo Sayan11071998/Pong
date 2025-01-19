@@ -3,6 +3,8 @@
 
 namespace Gameplay
 {
+	using namespace std;
+
 	Ball::Ball()
 	{
 		loadTexture();
@@ -13,7 +15,7 @@ namespace Gameplay
 	{
 		handleBoundaryCollision();
 		handlePaddleCollision(player1, player2);
-		handleOutofBoundCOllision();
+		handleOutofBoundCollision();
 	}
 
 	void Ball::update(Paddle* player1, Paddle* player2, TimeService* timeService)
@@ -38,29 +40,41 @@ namespace Gameplay
 		const RectangleShape& player2Paddle = player2->getPaddleSprite();
 
 		FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
+
 		FloatRect Player1PaddleBounds = player1Paddle.getGlobalBounds();
 		FloatRect Player2PaddleBounds = player2Paddle.getGlobalBounds();
 
 		if (ball_bounds.intersects(Player1PaddleBounds) && velocity.x < 0)
 		{
-			velocity.x = -velocity.x;
 			SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
+			velocity.x = -velocity.x;
 		}
-		if (ball_bounds.intersects(Player2PaddleBounds) && velocity.x > 0) { velocity.x = -velocity.x; }
+
+		if (ball_bounds.intersects(Player2PaddleBounds) && velocity.x > 0)
+		{
+			SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
+			velocity.x = -velocity.x;
+		}
 	}
 
 	void Ball::handleBoundaryCollision()
 	{
 		FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
 
-		if ((ball_bounds.top <= top_boundary && velocity.y < 0) || (ball_bounds.top + ball_bounds.height >= bottom_boundary && velocity.y > 0))
+		if (ball_bounds.top <= top_boundary && velocity.y < 0)
+		{
+			velocity.y = -velocity.y;
+			SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
+		}
+
+		if (ball_bounds.top + ball_bounds.height >= bottom_boundary && velocity.y > 0)
 		{
 			velocity.y = -velocity.y;
 			SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
 		}
 	}
 
-	void Ball::handleOutofBoundCOllision()
+	void Ball::handleOutofBoundCollision()
 	{
 		FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
 

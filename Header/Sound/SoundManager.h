@@ -15,6 +15,8 @@ namespace Sound
 		SoundManager();
 		~SoundManager();
 
+		void initialize();
+
 		static void PlaySoundEffect(SoundType soundType);
 		static void PlayBackgroundMusic();
 
@@ -27,7 +29,6 @@ namespace Sound
 		static const std::string bgmPath;
 		static const std::string ballBouncePath;
 
-		void initialize();
 		static void LoadSoundFromFile();
 	};
 }

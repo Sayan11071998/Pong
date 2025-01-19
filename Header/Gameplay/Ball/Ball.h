@@ -30,7 +30,7 @@ namespace Gameplay
 
 		void handlePaddleCollision(Paddle* player1, Paddle* player2);
 		void handleBoundaryCollision();
-		void handleOutofBoundCOllision();
+		void handleOutofBoundCollision();
 
 		bool isLeftCollisionOccurred();
 		bool isRightCollisionOccurred();
