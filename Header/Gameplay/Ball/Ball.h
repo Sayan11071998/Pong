@@ -42,7 +42,7 @@ namespace Gameplay
 		const float position_x = 615.0f;
 		const float position_y = 335.0f;
 
-		const float ball_speed = 0.5f;
+		const float ball_speed = 5.0f;
 		const float speed_multiplier = 100.0f;
 
 		Vector2f velocity;
