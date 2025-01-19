@@ -30,6 +30,12 @@ namespace Gameplay
 		void handleBoundaryCollision();
 		void handleOutofBoundCOllision();
 
+		bool isLeftCollisionOccurred();
+		bool isRightCollisionOccurred();
+
+		void updateLeftCollisionState(bool value);
+		void updateRightCollisionState(bool value);
+
 	private:
 		Texture pong_ball_texture;
 		Sprite pong_ball_sprite;
@@ -55,6 +61,9 @@ namespace Gameplay
 		float delay_duration = 2.0f;
 		float elapsed_delay_time = 0.0f;
 		BallState current_state = BallState::Idle;
+
+		bool had_left_collision = false;
+		bool had_right_collision = false;
 
 		void loadTexture();
 		void initializeVariables();
