@@ -42,6 +42,10 @@ Thrilled to share my latest project: **Pong!** Created with **C++** and **SFML**
 
 ---
 
+[![Watch the video](https://img.youtube.com/vi/Dpxidn4mX8o/maxresdefault.jpg)](https://youtu.be/Dpxidn4mX8o)
+
+### [Gameplay Video](https://youtu.be/Dpxidn4mX8o)
+
 ![Image](https://github.com/user-attachments/assets/473bb6e3-66f0-414e-b295-54b1716ffa45)
 
 ![Image](https://github.com/user-attachments/assets/9e608b04-ddf7-44d3-950f-82b602cf9abb)
