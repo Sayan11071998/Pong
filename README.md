@@ -1,41 +1,41 @@
-# 🚀 Pong! 🎮✨
+# 🚀 Pong! 🎮
 
-## 🌟 Project Milestone
+## Project Milestone
 
 Thrilled to share my latest project: **Pong!** Created with **C++** and **SFML**, this classic game allowed me to strengthen my knowledge while diving into the fundamentals of game development.
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
-- 🎨 **Rendering Graphics**  
+- **Rendering Graphics**  
   Learned how to render game elements like paddles, ball, and background using SFML.
 
-- 🏓 **Collision Detection**  
+- **Collision Detection**  
   Implemented real-time collision detection for the ball and paddles, enhancing the gameplay experience.
 
-- 🔢 **Score Display**  
+- **Score Display**  
   Integrated real-time score tracking and rendering to keep players engaged.
 
-- 🎮 **Real-Time Input**  
+- **Real-Time Input**  
   Took player input in real-time, allowing smooth paddle movement and responsive gameplay.
 
 ---
 
-## ✨ Takeaways
+## Takeaways
 
-- 💡 **SFML Fundamentals**  
+- **SFML Fundamentals**  
   Mastered how to utilize SFML for rendering graphics, managing input, and handling window events.
 
-- ⚙️ **Game Mechanics**  
+- ⚙**Game Mechanics**  
   Gained hands-on experience implementing collision mechanics and designing a simple game loop.
 
-- 🎨 **C++ Expertise**  
+- **C++ Expertise**  
   Strengthened my C++ skills by applying object-oriented principles to structure the game.
 
 ---
 
-## 🛠️ Technologies & Libraries
+##  Technologies & Libraries
 
 - **Language:** C++  
 - **Graphics & Audio:** SFML (Simple and Fast Multimedia Library)
